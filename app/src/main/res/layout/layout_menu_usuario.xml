@@ -1,0 +1,36 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Layout_menuSTV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/menu_user_btn_ruleta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="68dp"
+        android:text="Ruleta"
+        app:layout_constraintBottom_toTopOf="@+id/menu_user_btn_twitter"
+        app:layout_constraintStart_toStartOf="@+id/menu_user_btn_twitter" />
+
+    <Button
+        android:id="@+id/menu_user_btn_twitter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="49dp"
+        android:text="Twitter"
+        app:layout_constraintBottom_toTopOf="@+id/menu_user_btn_salir"
+        app:layout_constraintStart_toStartOf="@+id/menu_user_btn_salir" />
+
+    <Button
+        android:id="@+id/menu_user_btn_salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="135dp"
+        android:text="Salir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

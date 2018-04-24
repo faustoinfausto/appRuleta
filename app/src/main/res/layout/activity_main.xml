@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Include other layouts -->
+    <include
+        android:id="@+id/Layout_menuSTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_menu_smart_tv"
+        />
+    <include
+        android:id="@+id/Layout_detectar_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_camara_detectar_usuario"
+        />
+
+    <include
+        android:id="@+id/Layout_dia_especial"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_dia_especial_usuario"
+        />
+
+    <include
+        android:id="@+id/Layout_menu_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_menu_usuario"
+        />
+
+    <include
+        android:id="@+id/Layout_ruleta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_ruleta_oferta"
+        />
+
+    <include
+        android:id="@+id/Layout_premio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_premio_ruleta"
+        />
+
+    <!-- Vista del login al Smart TV -->
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/Layout_loginSTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- Label del user -->
+        <TextView
+            android:id="@+id/loginSTV_label_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="84dp"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="39dp"
+            android:text="Usuario:"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!-- Label del password -->
+        <TextView
+            android:id="@+id/loginSTV_label_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Password:"
+            app:layout_constraintStart_toStartOf="@+id/loginSTV_user"
+            app:layout_constraintTop_toBottomOf="@+id/loginSTV_user" />
+        <!-- EditText del user -->
+        <EditText
+            android:id="@+id/loginSTV_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            app:layout_constraintStart_toStartOf="@+id/loginSTV_label_user"
+            app:layout_constraintTop_toBottomOf="@+id/loginSTV_label_user" />
+        <!-- EditText del password -->
+        <EditText
+            android:id="@+id/loginSTV_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="@+id/loginSTV_label_pass"
+            app:layout_constraintTop_toBottomOf="@+id/loginSTV_label_pass" />
+        <!-- Boton de login -->
+        <Button
+            android:id="@+id/loginSTV_btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginSTV_pass" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>
